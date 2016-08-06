@@ -1,0 +1,14 @@
+<h1>List</h1>
+<ul>
+  <% data.forEach(function(value, key) { %>
+    <li><%- value.id %></li>
+    <li><%- value.title %></li>
+    <li><%- value.description %></li>
+    <li><%- value.text %></li>
+    <li>
+      <form action="/posts/delete/<%- value.id %>" method="POST">
+        <input type="submit" value="Delete">
+      </form>
+    </li>
+  <% }) %>
+</ul>
